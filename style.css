@@ -177,10 +177,10 @@ textarea {
 
 @media (max-width: 900px) {
     .vote {
-        width: 120px;
-        height: 44px;
+        max-width: 100px;
+        height: 30px;
         margin-left: 56%;
-        margin-top: 220px;
+        margin-top: 270px;
         flex-direction: row;
         position: relative;
        
@@ -235,6 +235,7 @@ textarea {
 
         margin-left: 5px;
         margin-top: 34px;
+        position: relative;
     }
     
     
