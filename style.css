@@ -25,6 +25,19 @@ body {
    
 }
 
+.topics{
+    margin-top: 30px;
+    margin-left: -80%;
+    
+    font-family: cursive;
+
+}
+
+h1{
+  font-size: 30px;
+  color:  hsl(211, 26%, 22%);
+}
+
 .card {
     min-width: 85%;
     height: 250px;
@@ -32,6 +45,7 @@ body {
     border-radius: 9px;
     background-color: white;
     position: relative;
+    box-shadow: 1px 1px 2px white;
     
 }
 
@@ -42,12 +56,13 @@ body {
 .card2{
 
     min-width: 85%;
-    height: 300px;
+    height: 250px;
     margin-top: 40px;
     border-radius: 9px;
     background-color: white;
     position: relative;
     display: none;
+    box-shadow: 1px 1px 2px white;
 }
 
 .card2.active {
@@ -77,8 +92,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
    
 }
+
+.result {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.plus:hover{
+    border: 2px solid hsl(238, 40%, 52%);
+}
+.minus:hover{
+    border: 2px solid hsl(238, 40%, 52%);
+}
+
 
 .image {
     width: 49px;
@@ -144,6 +173,7 @@ body {
     min-height: 270px;
     margin-left: 80px;
     margin-top: 40px;
+    display: flex;
       
 }
 
@@ -172,10 +202,7 @@ textarea {
     margin-top: 20px;
     margin-left: 86%;
     position: relative;
-    display: inline-block;
-    display: flex;
     
-   
 }
 
 .btn1, .btn2 {
@@ -196,12 +223,17 @@ textarea {
 .btn1 {
     background-color: rgb(47, 155, 47);
     border: 1px solid rgb(47, 155, 47);
+    margin-left: 34%;
+  
+    margin-top: px;
+
 }
 
 .btn2 {
     background-color: red;
     border: 1px solid red;
-    margin-left: 10px;
+    margin-left: 80px;
+    margin-top: -190px;
 }
 
 .icons{
@@ -219,6 +251,18 @@ textarea {
 
 @media (max-width: 900px) {
 
+    .topics{
+        margin-top: 30px;
+        margin-left: -72%;
+    
+    }
+
+    .card2{
+
+        width: 85%;
+        height: 400px;
+    }
+
     .mover{
         margin-top: 220px;
     }
@@ -227,7 +271,7 @@ textarea {
         width: 120px;
         height: 40px;
         margin-left: 20px;
-        margin-top: 210px;
+        margin-top: 270px;
         flex-direction: row;
         position: relative;
        
@@ -268,16 +312,26 @@ textarea {
         width: 85%;
         max-height: 200px;
         margin-left: 20px;
-        margin-top: -125px;
+        margin-top: 50px;
           
     }
 
     .text2 {
         width: 85%;
-        max-height: 250px;
+        max-height: 210px;
         margin-left: 20px;
         margin-top: -125px;
+        overflow: hidden
+        
           
+    }
+
+    .display {
+        min-height: 90px;
+    }
+
+    .display::-webkit-scrollbar{
+        height: 0;
     }
     
     textarea {
@@ -288,7 +342,17 @@ textarea {
 
     .btn {
         margin-left: 1px;
-        margin-top: 40px;
+        margin-top: 28px;
+    }
+
+    .btn1 {
+        margin-left: 1px;
+        margin-top: 20px;
+    }
+
+    .btn2 {
+        margin-left: 20px;
+        margin-top: -100px;
     }
 
     /* loader */
@@ -296,12 +360,18 @@ textarea {
         position: fixed;
         top: 0;
         left: 0;
-        margin-top: -38%;
         min-width: 100vw;
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
+       
+    }
+
+    .loader::after {
+        content: "";
+        width: 50px;
+        height: 50px;
        
     }
     
