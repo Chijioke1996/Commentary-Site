@@ -23,12 +23,14 @@ publish.addEventListener("click", (e) => {
 
 
 Delete.addEventListener("click", (e) => {
-  e.preventDefault()
+  
   card2.classList.remove("active")
   localStorage.removeItem("typedInfo", saver)
 
 
 })
+
+
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< CLEARS TEXTAREA ON CLICK OF PUBLISH BUTTON >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
