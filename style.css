@@ -63,6 +63,7 @@ h1{
     position: relative;
     display: none;
     box-shadow: 1px 1px 2px white;
+    border: 2px solid black;
 }
 
 .card2.active {
@@ -93,7 +94,16 @@ h1{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border: 1px solid black;
    
+}
+
+.plus {
+    border-top-right-radius: 12px;
+}
+
+.minus {
+    border-bottom-left-radius: 12px;
 }
 
 .result {
@@ -103,6 +113,7 @@ h1{
 
 .plus:hover{
     border: 2px solid hsl(238, 40%, 52%);
+  
 }
 .minus:hover{
     border: 2px solid hsl(238, 40%, 52%);
@@ -225,7 +236,7 @@ textarea {
     border: 1px solid rgb(47, 155, 47);
     margin-left: 34%;
   
-    margin-top: px;
+ 
 
 }
 
@@ -261,6 +272,7 @@ textarea {
 
         width: 85%;
         height: 400px;
+        border: 2px solid black;
     }
 
     .mover{
@@ -275,6 +287,18 @@ textarea {
         flex-direction: row;
         position: relative;
        
+    }
+
+    .plus {
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 0px;
+    }
+    
+    .minus {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
     }
 
     .image {
@@ -328,6 +352,7 @@ textarea {
 
     .display {
         min-height: 90px;
+        border: none;
     }
 
     .display::-webkit-scrollbar{

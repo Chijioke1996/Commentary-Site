@@ -7,15 +7,20 @@ const Delete = document.querySelector(".btn2")
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ADDS AND DELETE INPUTED TEXTS FROM LOCAL STORAGE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 publish.addEventListener("click", (e) => {
+  // Check if the text area is empty
+  if (inp.value.trim() === '') {
+    return alert("Please,enter a view before publishing")
+  }
+
   e.preventDefault()
-  card2.classList.add("active")
   const saver = inp.value
+  card2.classList.add("active")
   localStorage.setItem("typedInfo", saver)
   display.textContent = localStorage.getItem("typedInfo")
 
 
-
 })
+
 
 Delete.addEventListener("click", (e) => {
   e.preventDefault()
@@ -23,6 +28,12 @@ Delete.addEventListener("click", (e) => {
   localStorage.removeItem("typedInfo", saver)
 
 
+})
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< CLEARS TEXTAREA ON CLICK OF PUBLISH BUTTON >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+publish.addEventListener("click", () => {
+  inp.value = "";
 })
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SPINNING EFFECT WHILE LOADING >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -40,12 +51,6 @@ window.addEventListener("load", () => {
 })
 
 
-// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< CLEARS TEXTAREA ON CLICK OF PUBLISH BUTTON >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-publish.addEventListener("click", () => {
-  inp.value = "";
-})
-
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< VOTING >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 const plus = document.querySelector(".plus")
@@ -60,7 +65,7 @@ plus.addEventListener("click", () => {
 })
 
 minus.addEventListener("click", () => {
-  if ( vote > 0) {
+  if (vote > 0) {
     vote--
     result.textContent = vote
     console.log(vote);
